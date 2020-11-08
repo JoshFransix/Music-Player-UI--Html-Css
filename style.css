@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Sansita+Swashed:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #222;
+  min-height: 100vh;
+}
+
+.container {
+  background: radial-gradient(#111, #444);
+  box-shadow: -60px -60px -90px #222, 60px 60px 90px rgba(41, 51, 51, 0.9);
+  width: 600px;
+  height: 70%;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  border-radius: 25px;
+  color: #fff;
+  z-index: 1;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 135px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.title::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 135px;
+  background: url(./img/beard-man-holding-cassette-lying-on-blue-and-violet-linen-3756766.jpg)
+    no-repeat center center/cover;
+  z-index: -1;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.title h1 {
+  font-family: "Sansita Swashed", cursive;
+}
+
+.title-text h1,
+.title-text h5 {
+  margin: 1rem;
+}
+
+.fa-ellipsis-v {
+  color: #ff4200;
+  cursor: pointer;
+}
+
+.title-img img {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+}
+
+.top-icons,
+.bottom-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30%;
+  color: #ff4200;
+  padding: 2rem;
+}
+
+.bottom-icons {
+  height: 10%;
+}
+
+.top-icons i,
+.bottom-icons i {
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.top-icons i:not(.fa-play):hover,
+.bottom-icons i:hover {
+  font-size: 24px;
+  color: #ff4200;
+}
+
+.fa-play:hover {
+  font-size: 28px;
+  animation: rotate 0.5s linear forwards;
+}
+
+.bar-1 {
+  height: 3px;
+  background: #333;
+}
+
+.bar-2 {
+  position: absolute;
+  bottom: 37.3%;
+  left: 8%;
+  cursor: pointer;
+  width: 220px;
+  height: 3px;
+  background: #ff4200;
+}
+
+.bar-circle {
+  position: absolute;
+  bottom: 36%;
+  left: 43%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ff4200;
+}
+
+.bar-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 805;
+  padding: 2rem;
+  height: 5%;
+}
+
+.circle-1,
+.circle-2 {
+  position: absolute;
+  top: 44.5%;
+  left: 48%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ff4200;
+  z-index: -1;
+}
+
+.circle-1 {
+  animation: rotate 15s infinite linear forwards;
+}
+.circle-2 {
+  animation: rotate 11s infinite linear forwards;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
